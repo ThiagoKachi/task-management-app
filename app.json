@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "taskManagement",
+    "slug": "taskManagement",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
