@@ -1101,6 +1101,11 @@
   resolved "https://registry.yarnpkg.com/@eslint/js/-/js-8.38.0.tgz#73a8a0d8aa8a8e6fe270431c5e72ae91b5337892"
   integrity sha512-IoD2MfUnOV58ghIHCiil01PcohxjbYR/qCxsoC+xNgUwh1EY8jOOrYmu3d3a71+tJJ23uscEV4X2HJWMsPJu4g==
 
+"@expo-google-fonts/raleway@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/raleway/-/raleway-0.2.3.tgz#bdcad2a77b7d0f84ef7a9fd5eb993597270ad9a5"
+  integrity sha512-31D87kwraBhf59VPXEUQxRQjMCIUqNrvmWmfcyRremnwjdvSyu7LAjT6KmTZB/kAuRHJRGY4KFPQDhnPhxkZ7A==
+
 "@expo/bunyan@4.0.0", "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"
