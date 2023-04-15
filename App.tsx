@@ -1,7 +1,4 @@
 import React from 'react';
-import { StatusBar } from 'react-native';
-import { Box, NativeBaseProvider, Text } from 'native-base';
-import { theme } from './src/styles/theme';
 import {
   useFonts,
   Raleway_400Regular,
@@ -9,6 +6,9 @@ import {
   Raleway_600SemiBold,
   Raleway_700Bold,
 } from '@expo-google-fonts/raleway';
+
+import LoginForm from './src/pages/LoginForm';
+import { Layout } from './src/components/Layout';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,20 +23,8 @@ export default function App() {
   }
 
   return (
-    <NativeBaseProvider theme={theme}>
-      <StatusBar barStyle="light-content" />
-      <Box
-        alignItems="center"
-        justifyContent="center"
-        flex="1"
-        bgColor="primary"
-      >
-        <Box h="200px" w="200px" bgColor="secondary" mb="24px">
-          <Text color="white" fontWeight="600" fontSize="24">
-            Teste de fonte
-          </Text>
-        </Box>
-      </Box>
-    </NativeBaseProvider>
+    <Layout>
+      <LoginForm />
+    </Layout>
   );
 }
