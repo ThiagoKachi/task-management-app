@@ -1,6 +1,11 @@
 import React from 'react';
-import { Text } from 'native-base';
+import { Box } from 'native-base';
+import { Header } from '../../components/Header';
 
 export default function Home() {
-  return <Text>Olá, mundo!</Text>;
+  return (
+    <Box backgroundColor="primary" flex="1">
+      <Header />
+    </Box>
+  );
 }

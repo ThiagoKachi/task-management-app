@@ -13,7 +13,7 @@ export function AppRoutes() {
     <>
       <Navigator
         initialRouteName="Home"
-        screenOptions={({ route }) => ({
+        screenOptions={() => ({
           headerShown: false,
           tabBarActiveTintColor: 'white',
           tabBarInactiveTintColor: 'white',
@@ -21,8 +21,8 @@ export function AppRoutes() {
           tabBarShowLabel: false,
           tabBarStyle: {
             height: 100,
-            paddingVertical: Platform.OS === 'ios' ? 10 : 0,
             backgroundColor: '#1B1B1B',
+            borderTopColor: '#1B1B1B',
           },
         })}
       >
