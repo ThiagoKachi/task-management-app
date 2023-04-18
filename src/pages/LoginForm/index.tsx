@@ -4,7 +4,13 @@ import { ButtonLoginForm } from '../../components/LoginForm/Button';
 
 export default function LoginForm() {
   return (
-    <Stack flex="1" alignItems="center" mt="100px" space="80px">
+    <Stack
+      flex="1"
+      alignItems="center"
+      pt="100px"
+      space="80px"
+      bgColor="primary"
+    >
       <Flex alignItems="center">
         <Image
           source={{

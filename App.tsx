@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
 import {
   useFonts,
   Raleway_400Regular,
@@ -7,8 +8,8 @@ import {
   Raleway_700Bold,
 } from '@expo-google-fonts/raleway';
 
-import LoginForm from './src/pages/LoginForm';
 import { Layout } from './src/components/Layout';
+import { AppRoutes } from './src/routes/app.routes';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -23,8 +24,10 @@ export default function App() {
   }
 
   return (
-    <Layout>
-      <LoginForm />
-    </Layout>
+    <NavigationContainer>
+      <Layout>
+        <AppRoutes />
+      </Layout>
+    </NavigationContainer>
   );
 }

@@ -11,9 +11,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <NativeBaseProvider theme={theme}>
       <StatusBar barStyle="light-content" />
-      <Box flex="1" bgColor="primary">
-        {children}
-      </Box>
+      <Box flex="1">{children}</Box>
     </NativeBaseProvider>
   );
 }
