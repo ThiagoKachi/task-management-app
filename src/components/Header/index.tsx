@@ -5,8 +5,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 export function Header() {
   return (
     <Flex
-      py="80px"
-      px="32px"
+      pt="80px"
       direction="row"
       alignItems="center"
       justifyContent="space-between"
