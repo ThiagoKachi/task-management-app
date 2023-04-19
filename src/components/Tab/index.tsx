@@ -9,7 +9,7 @@ interface TabListProps {
   isActive: boolean;
 }
 
-export function TabList({ setTab, tab, title, isActive }: TabListProps) {
+export function Tab({ setTab, tab, title, isActive }: TabListProps) {
   return (
     <TouchableOpacity onPress={() => setTab(tab)}>
       <Text

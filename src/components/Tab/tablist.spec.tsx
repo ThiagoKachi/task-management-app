@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react-native';
-import { TabList } from '.';
+import { Tab } from '.';
 import { NativeBaseProvider } from 'native-base';
 import { initialWindowMetrics } from '../../tests/utils';
 
@@ -19,7 +19,7 @@ const tabPropsMock = {
 
 describe('TabList', () => {
   it('should show tabs', () => {
-    render(<TabList {...tabPropsMock} />, {
+    render(<Tab {...tabPropsMock} />, {
       wrapper: Providers,
     });
 
@@ -27,7 +27,7 @@ describe('TabList', () => {
   });
 
   it('should change tab style when is clicked', () => {
-    render(<TabList {...tabPropsMock} />, {
+    render(<Tab {...tabPropsMock} />, {
       wrapper: Providers,
     });
 
@@ -39,7 +39,7 @@ describe('TabList', () => {
   });
 
   it('should change status when click in tab', () => {
-    render(<TabList {...tabPropsMock} />, {
+    render(<Tab {...tabPropsMock} />, {
       wrapper: Providers,
     });
 

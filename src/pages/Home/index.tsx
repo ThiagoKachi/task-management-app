@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Flex, Heading } from 'native-base';
 import { Header } from '../../components/Header';
-import { TabList } from '../../components/TabList';
+import { Tab } from '../../components/Tab';
 
 export default function Home() {
   const [tab, setTab] = useState(1);
@@ -27,9 +27,9 @@ export default function Home() {
         borderBottomColor="secondary"
         mt="32px"
       >
-        <TabList title="Todos" setTab={setTab} tab={1} isActive={tab === 1} />
-        <TabList title="Hoje" setTab={setTab} tab={2} isActive={tab === 2} />
-        <TabList title="Amanhã" setTab={setTab} tab={3} isActive={tab === 3} />
+        <Tab title="Todos" setTab={setTab} tab={1} isActive={tab === 1} />
+        <Tab title="Hoje" setTab={setTab} tab={2} isActive={tab === 2} />
+        <Tab title="Amanhã" setTab={setTab} tab={3} isActive={tab === 3} />
       </Flex>
     </Box>
   );
