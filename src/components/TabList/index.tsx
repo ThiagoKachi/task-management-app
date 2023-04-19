@@ -1,46 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { TouchableOpacity } from 'react-native';
-import { Flex, Text } from 'native-base';
+import { Text } from 'native-base';
 
-export function TabList() {
-  const [tab, setTab] = useState(1);
+interface TabListProps {
+  tab: number;
+  setTab: (tab: number) => void;
+  title: string;
+  isActive: boolean;
+}
 
+export function TabList({ setTab, tab, title, isActive }: TabListProps) {
   return (
-    <Flex
-      direction="row"
-      justifyContent="space-between"
-      borderBottomWidth="1px"
-      borderBottomStyle="solid"
-      borderBottomColor="secondary"
-      mt="32px"
-    >
-      <TouchableOpacity onPress={() => setTab(1)}>
-        <Text
-          color={tab === 1 ? 'secondary' : 'white'}
-          fontWeight="400"
-          fontSize="24px"
-        >
-          Todos
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setTab(2)}>
-        <Text
-          color={tab === 2 ? 'secondary' : 'white'}
-          fontWeight="400"
-          fontSize="24px"
-        >
-          Hoje
-        </Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => setTab(3)}>
-        <Text
-          color={tab === 3 ? 'secondary' : 'white'}
-          fontWeight="400"
-          fontSize="24px"
-        >
-          Amanhã
-        </Text>
-      </TouchableOpacity>
-    </Flex>
+    <TouchableOpacity onPress={() => setTab(tab)}>
+      <Text
+        color={isActive ? 'secondary' : 'white'}
+        fontWeight="400"
+        fontSize="24px"
+      >
+        {title}
+      </Text>
+    </TouchableOpacity>
   );
 }

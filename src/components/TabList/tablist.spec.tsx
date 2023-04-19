@@ -10,30 +10,44 @@ const Providers: React.FC = ({ children }: any) => (
   </NativeBaseProvider>
 );
 
+const tabPropsMock = {
+  tab: 1,
+  setTab: jest.fn(),
+  title: 'Todos',
+  isActive: true,
+};
+
 describe('TabList', () => {
   it('should show tabs', () => {
-    render(<TabList />, {
+    render(<TabList {...tabPropsMock} />, {
       wrapper: Providers,
     });
 
     expect(screen.getByText('Todos')).toBeVisible();
-    expect(screen.getByText('Hoje')).toBeVisible();
-    expect(screen.getByText('Amanhã')).toBeVisible();
   });
 
-  fit('should change tab style when is clicked', () => {
-    render(<TabList />, {
+  it('should change tab style when is clicked', () => {
+    render(<TabList {...tabPropsMock} />, {
       wrapper: Providers,
     });
 
     const allBtn = screen.getByText('Todos');
-    const todayBtn = screen.getByText('Hoje');
-    const tomorrowBtn = screen.getByText('Amanhã');
 
-    fireEvent.press(todayBtn);
+    fireEvent.press(allBtn);
 
-    expect(todayBtn.props.style.color).not.toBe('#FFFFFF');
-    expect(allBtn.props.style.color).toBe('#FFFFFF');
-    expect(tomorrowBtn.props.style.color).toBe('#FFFFFF');
+    expect(allBtn.props.style.color).not.toBe('#FFFFFF');
+  });
+
+  it('should change status when click in tab', () => {
+    render(<TabList {...tabPropsMock} />, {
+      wrapper: Providers,
+    });
+
+    const allBtn = screen.getByText('Todos');
+
+    fireEvent.press(allBtn);
+
+    expect(tabPropsMock.setTab).toHaveBeenCalled();
+    expect(tabPropsMock.setTab).toHaveBeenCalledWith(1);
   });
 });
