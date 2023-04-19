@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Box, Flex, Heading } from 'native-base';
+
 import { Header } from '../../components/Header';
 import { Tab } from '../../components/Tab';
+import { Card } from '../../components/Card';
 
 export default function Home() {
   const [tab, setTab] = useState(1);
@@ -25,12 +27,15 @@ export default function Home() {
         borderBottomWidth="1px"
         borderBottomStyle="solid"
         borderBottomColor="secondary"
-        mt="32px"
+        my="32px"
+        mb="8px"
       >
         <Tab title="Todos" setTab={setTab} tab={1} isActive={tab === 1} />
         <Tab title="Hoje" setTab={setTab} tab={2} isActive={tab === 2} />
         <Tab title="Amanhã" setTab={setTab} tab={3} isActive={tab === 3} />
       </Flex>
+
+      <Card title="Criar um novo projeto" priority="Médio" date="16 Abril" />
     </Box>
   );
 }

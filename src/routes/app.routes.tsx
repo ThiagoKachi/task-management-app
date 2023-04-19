@@ -1,5 +1,4 @@
 import React from 'react';
-import { Platform } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons, AntDesign, FontAwesome } from '@expo/vector-icons';
 
@@ -45,14 +44,14 @@ export function AppRoutes() {
             tabBarIcon: ({ size, color, focused }) =>
               focused ? (
                 <AntDesign
-                  name="pluscircleo"
+                  name="pluscircle"
                   size={54}
                   color={color}
                   style={{ width: 54 }}
                 />
               ) : (
                 <AntDesign
-                  name="pluscircle"
+                  name="pluscircleo"
                   size={54}
                   color={color}
                   style={{ width: 54 }}

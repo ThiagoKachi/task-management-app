@@ -1,6 +1,7 @@
 import React from 'react';
-import { Flex, Image, Text } from 'native-base';
+import { Flex, Text } from 'native-base';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { ProfileImage } from '../ProfileImage';
 
 export function Header() {
   return (
@@ -16,13 +17,7 @@ export function Header() {
           TaskManagement
         </Text>
       </Flex>
-      <Image
-        source={{ uri: 'https://avatars.githubusercontent.com/u/61670495?v=4' }}
-        alt="Profile image"
-        size={12}
-        borderRadius="50px"
-        testID="profile-image"
-      />
+      <ProfileImage />
     </Flex>
   );
 }
