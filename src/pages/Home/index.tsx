@@ -35,7 +35,7 @@ export default function Home() {
         <Tab title="Amanhã" setTab={setTab} tab={3} isActive={tab === 3} />
       </Flex>
 
-      <Card title="Criar um novo projeto" priority="Médio" date="16 Abril" />
+      <Card title="Criar um novo projeto" priority="hard" date="16 Abril" />
     </Box>
   );
 }

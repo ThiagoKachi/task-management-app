@@ -2,6 +2,7 @@ import React from 'react';
 import { Box, Flex, Text } from 'native-base';
 import { ProfileImage } from '../ProfileImage';
 import { AntDesign } from '@expo/vector-icons';
+import { decodePriority } from '../../utils/decodePriority';
 
 interface CardProps {
   title: string;
@@ -14,7 +15,7 @@ export function Card({ title, priority, date }: CardProps) {
     <Box
       mt="16px"
       w="100%"
-      bgColor="secondary"
+      bgColor={priority === 'hard' ? 'secondary' : 'primary_light'}
       borderRadius="16px"
       py="16px"
       px="24px"
@@ -22,7 +23,7 @@ export function Card({ title, priority, date }: CardProps) {
       <Flex direction="row" alignItems="center" justifyContent="space-between">
         <Box py="4px" px="24px" bgColor="white" borderRadius="2xl">
           <Text fontWeight="600" color="gray.600">
-            {priority}
+            {decodePriority(priority)}
           </Text>
         </Box>
         <ProfileImage />

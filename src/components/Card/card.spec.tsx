@@ -13,7 +13,7 @@ const Providers: React.FC = ({ children }: any) => (
 const cardProps = {
   title: 'Task 1',
   date: '16 Abril',
-  priority: 'Médio',
+  priority: 'medium',
 };
 
 describe('Card', () => {
