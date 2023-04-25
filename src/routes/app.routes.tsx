@@ -4,6 +4,7 @@ import { Ionicons, AntDesign, FontAwesome } from '@expo/vector-icons';
 
 import LoginForm from '../pages/LoginForm';
 import Home from '../pages/Home';
+import RegisterTask from '../pages/RegisterTask';
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -38,8 +39,8 @@ export function AppRoutes() {
           }}
         />
         <Screen
-          name="AddTask"
-          component={LoginForm}
+          name="RegisterTask"
+          component={RegisterTask}
           options={{
             tabBarIcon: ({ size, color, focused }) =>
               focused ? (

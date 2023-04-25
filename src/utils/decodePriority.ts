@@ -1,12 +1,12 @@
 export function decodePriority(priority: string) {
   switch (priority) {
-    case 'easy':
-      return 'Fácil';
+    case 'low':
+      return 'Baixa';
     case 'medium':
-      return 'Médio';
+      return 'Média';
     case 'high':
-      return 'Difícil';
+      return 'Alta';
     default:
-      return 'Díficil';
+      return 'Baixa';
   }
 }

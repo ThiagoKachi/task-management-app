@@ -15,7 +15,7 @@ export function Card({ title, priority, date }: CardProps) {
     <Box
       mt="16px"
       w="100%"
-      bgColor={priority === 'hard' ? 'secondary' : 'primary_light'}
+      bgColor={priority === 'high' ? 'secondary' : 'primary_light'}
       borderRadius="16px"
       py="16px"
       px="24px"

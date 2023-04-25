@@ -1,12 +1,41 @@
 import React, { useState } from 'react';
-import { Box, Flex, Heading } from 'native-base';
+import { Box, Button, FlatList, Flex, Heading } from 'native-base';
 
 import { Header } from '../../components/Header';
 import { Tab } from '../../components/Tab';
 import { Card } from '../../components/Card';
+import AddTaskButton from '../../components/AddTaskButton';
+import { TouchableOpacity } from 'react-native';
 
 export default function Home() {
   const [tab, setTab] = useState(1);
+
+  const DATA = [
+    {
+      id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+      title: 'First Item',
+    },
+    {
+      id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+      title: 'Second Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29d72',
+      title: 'Third Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-145571e29dw72',
+      title: 'Third Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96-1454571e29d72',
+      title: 'Third Item',
+    },
+    {
+      id: '58694a0f-3da1-471f-bd96f-145571e29d72',
+      title: 'Third Item',
+    },
+  ];
 
   return (
     <Box backgroundColor="primary" flex="1" px="32px">
@@ -35,7 +64,17 @@ export default function Home() {
         <Tab title="Amanhã" setTab={setTab} tab={3} isActive={tab === 3} />
       </Flex>
 
-      <Card title="Criar um novo projeto" priority="hard" date="16 Abril" />
+      <FlatList
+        data={DATA}
+        renderItem={({ item }) => (
+          <Card title="Criar um novo projeto" priority="high" date="16 Abril" />
+        )}
+        contentContainerStyle={{ paddingBottom: 32, gap: 16 }}
+        showsVerticalScrollIndicator={false}
+        keyExtractor={(item) => String(item.id)}
+      />
+
+      <AddTaskButton />
     </Box>
   );
 }

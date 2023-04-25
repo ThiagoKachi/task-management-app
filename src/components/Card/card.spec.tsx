@@ -23,7 +23,7 @@ describe('Card', () => {
     });
 
     expect(screen.getByText(/task 1/i)).toBeVisible();
-    expect(screen.getByText(/Médio/i)).toBeVisible();
+    expect(screen.getByText(/Média/i)).toBeVisible();
     expect(screen.getByText(/16 Abril/i)).toBeVisible();
   });
 });
