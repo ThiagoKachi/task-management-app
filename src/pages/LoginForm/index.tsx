@@ -1,6 +1,6 @@
 import React from 'react';
 import { Flex, Heading, Image, Stack } from 'native-base';
-import { ButtonLoginForm } from '../../components/LoginForm/Button';
+import ButtonLoginForm from '../../components/LoginForm/Button';
 
 export default function LoginForm() {
   return (
@@ -16,8 +16,9 @@ export default function LoginForm() {
           source={{
             uri: 'https://cdn-icons-png.flaticon.com/512/6404/6404259.png',
           }}
-          alt="AQUI"
+          alt="app-logo"
           size="2xl"
+          testID="app-logo"
         />
         <Heading
           fontSize="32px"
@@ -30,8 +31,16 @@ export default function LoginForm() {
         </Heading>
       </Flex>
       <Stack space="24px" w="100%" alignItems="center">
-        <ButtonLoginForm btnText="Login com Github" icon="github" />
-        <ButtonLoginForm btnText="Login com Google" icon="google" />
+        <ButtonLoginForm
+          btnText="Login com Github"
+          icon="github"
+          onpress={() => console.log('teste')}
+        />
+        <ButtonLoginForm
+          btnText="Login com Google"
+          icon="google"
+          onpress={() => console.log('teste')}
+        />
       </Stack>
     </Stack>
   );

@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 import {
   Box,
-  Button,
   Flex,
   FormControl,
   Heading,
   Input,
-  Text,
   TextArea,
   VStack,
   WarningOutlineIcon,
 } from 'native-base';
 import ButtonComponent from '../../components/Button';
+import ButtonLoginForm from '../../components/LoginForm/Button';
 
 export default function RegisterTask() {
   const [priority, setPriority] = useState('low');
@@ -91,15 +90,12 @@ export default function RegisterTask() {
           </Flex>
         </FormControl>
 
-        <Button
-          bgColor="secondary"
-          borderRadius="8px"
-          onPress={() => console.log('aqui')}
-        >
-          <Text fontSize="18px" fontWeight="600" color="white">
-            Adicionar task
-          </Text>
-        </Button>
+        <ButtonLoginForm
+          btnText="Adicionar task"
+          onpress={() => console.log('teste')}
+          showIcon={false}
+          w="100%"
+        />
       </VStack>
     </Box>
   );

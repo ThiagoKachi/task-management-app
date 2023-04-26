@@ -20,6 +20,7 @@ export default function AddTaskButton() {
         borderColor="primary_light"
         borderWidth="2px"
         padding="16px"
+        testID="add-task-button"
         icon={<Icon color="white" as={AntDesign} name="plus" size="lg" />}
         onPress={() => navigation.navigate('RegisterTask')}
       />

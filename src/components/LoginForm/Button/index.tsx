@@ -1,19 +1,32 @@
 import React from 'react';
-import { Button, Text } from 'native-base';
+import { Button, Text, IButtonProps } from 'native-base';
 import { AntDesign } from '@expo/vector-icons';
 
-interface ButtonLoginFormProps {
-  icon: 'github' | 'google';
+interface ButtonLoginFormProps extends IButtonProps {
+  icon?: 'github' | 'google';
   btnText: string;
+  onpress: () => void;
+  showIcon?: boolean;
 }
 
-export function ButtonLoginForm({ btnText, icon }: ButtonLoginFormProps) {
+export default function ButtonLoginForm({
+  btnText,
+  icon,
+  onpress,
+  showIcon = true,
+  ...rest
+}: ButtonLoginFormProps) {
   return (
     <Button
       w="80%"
       bgColor="secondary"
       py="16px"
-      leftIcon={<AntDesign name={icon} size={32} color="white" />}
+      leftIcon={
+        showIcon ? <AntDesign name={icon} size={32} color="white" /> : undefined
+      }
+      onPress={onpress}
+      testID="button-login-form"
+      {...rest}
     >
       <Text fontSize="16px" fontWeight="600" color="white" ml="16px">
         {btnText}
