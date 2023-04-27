@@ -3,7 +3,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons, AntDesign, FontAwesome } from '@expo/vector-icons';
 
 import LoginForm from '../pages/LoginForm';
+
 import Home from '../pages/Home';
+import Profile from '../pages/Profile';
 import RegisterTask from '../pages/RegisterTask';
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -61,8 +63,8 @@ export function AppRoutes() {
           }}
         />
         <Screen
-          name="Login"
-          component={LoginForm}
+          name="Profile"
+          component={Profile}
           options={{
             tabBarIcon: ({ size, color, focused }) =>
               focused ? (

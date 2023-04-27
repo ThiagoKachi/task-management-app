@@ -33,7 +33,18 @@ describe('RegisterTask', () => {
     expect(descriptionInput).toBeVisible();
   });
 
-  fit('should render priority buttons and change priority when clicked', () => {
+  it('should render date e time inputs', () => {
+    render(<RegisterTask />, {
+      wrapper: Providers,
+    });
+
+    const dateInput = screen.getAllByTestId('dateTimePicker');
+
+    expect(dateInput[0]).toBeVisible();
+    expect(dateInput[1]).toBeVisible();
+  });
+
+  it('should render priority buttons and change priority when clicked', () => {
     render(<RegisterTask />, {
       wrapper: Providers,
     });
@@ -78,7 +89,7 @@ describe('RegisterTask', () => {
     expect(highPriorityButton).not.toHaveStyle({ backgroundColor: '#FFFFFF' });
   });
 
-  it('should render submit button and execute a function when is clicked', () => {
+  it('should render submit button', () => {
     render(<RegisterTask />, {
       wrapper: Providers,
     });
