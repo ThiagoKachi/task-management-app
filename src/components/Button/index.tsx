@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button, Text } from 'native-base';
+import { Button, Text, IIconButtonProps } from 'native-base';
 
-interface ButtonComponentProps {
+interface ButtonComponentProps extends IIconButtonProps {
   text: string;
   priority: string;
   setPriority: (priority: string) => void;
